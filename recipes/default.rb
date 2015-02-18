@@ -36,7 +36,7 @@ when "debian", "ubuntu"
 when "redhat", "centos", "amazon"
   # Yum, support only 64 bits
   execute 'install-newrelic-sysmond' do
-    command "rpm -Uvh https://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm"
+    command "rpm -Uvh --replacepkgs https://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm"
     action :run
   end
 else
@@ -48,10 +48,6 @@ package 'newrelic-sysmond'
 execute 'set-newrelic-license-key' do
   command "nrsysmond-config --set license_key=#{node[:newrelic_server][:license_key]}"
   action :run
-end
-
-execute 'set-newrelic-license-key' do
-  command "nrsysmond-config --set license_key=#{node[:newrelic_server][:license_key]}"
 end
 
 service 'newrelic-sysmond' do
