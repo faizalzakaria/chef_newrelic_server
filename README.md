@@ -1,21 +1,15 @@
 chef_newrelic_server Cookbook
 =============================
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook install NewRelic server monitoring for you. It supports centos, redhat, debian and ubuntu.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
-#### packages
-- `toaster` - chef_newrelic_server needs toaster to brown your bagel.
+None.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
 e.g.
 #### chef_newrelic_server::default
@@ -27,17 +21,16 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['chef_newrelic_server']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['chef_newrelic_server']['license_key']</tt></td>
+    <td>String</td>
+    <td>Newrelic license key (it has to be 40 characeters)</td>
+    <td><tt>15b950bda6ac554663e507d39c45e91c20418103</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### chef_newrelic_server::default
-TODO: Write usage instructions for each cookbook.
 
 e.g.
 Just include `chef_newrelic_server` in your node's `run_list`:
@@ -65,4 +58,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: [ Faizal F Zakaria ]
