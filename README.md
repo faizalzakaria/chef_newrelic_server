@@ -21,7 +21,7 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['chef_newrelic_server']['license_key']</tt></td>
+    <td><tt>['newrelic_server']['license_key']</tt></td>
     <td>String</td>
     <td>Newrelic license key (it has to be 40 characeters)</td>
     <td><tt>15b950bda6ac554663e507d39c45e91c20418103</tt></td>
