@@ -20,7 +20,7 @@ case node["platform"]
 when "debian", "ubuntu"
   # Apt
   execute 'configure-new-relic-apt' do
-    command "sudo sh -c 'echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list'"
+    command "sudo sh -c 'echo deb http://apt.newrelic.com/debian/ newrelic non-free > /etc/apt/sources.list.d/newrelic.list'"
     action :run
   end
 
@@ -53,3 +53,5 @@ end
 service 'newrelic-sysmond' do
   action :start
 end
+
+# mongod --config /etc/mongod.conf
