@@ -33,7 +33,7 @@ when "debian", "ubuntu"
     command "apt-get update"
     action :run
   end
-when "redhat", "centos", "amazon"
+when "redhat", "centos", "amazon", "scientific"
   # Yum, support only 64 bits
   execute 'install-newrelic-sysmond' do
     command "rpm -Uvh --replacepkgs https://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm"
