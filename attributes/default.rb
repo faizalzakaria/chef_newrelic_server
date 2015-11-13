@@ -16,5 +16,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default[:newrelic_server] = {}
-default[:newrelic_server][:license_key] = '15b950bda6ac554661a03e507d39c45e91c20418'
+default['newrelic_server']['license_key'] = '15b950bda6ac554661a03e507d39c45e91c20418'

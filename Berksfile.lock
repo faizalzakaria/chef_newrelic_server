@@ -1,0 +1,7 @@
+DEPENDENCIES
+  chef_newrelic_server
+    path: .
+    metadata: true
+
+GRAPH
+  chef_newrelic_server (0.1.3)

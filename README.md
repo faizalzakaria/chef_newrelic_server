@@ -11,28 +11,15 @@ None.
 Attributes
 ----------
 
-e.g.
 #### chef_newrelic_server::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['newrelic_server']['license_key']</tt></td>
-    <td>String</td>
-    <td>Newrelic license key (it has to be 40 characeters)</td>
-    <td><tt>15b950bda6ac554663e507d39c45e91c20418103</tt></td>
-  </tr>
-</table>
+|    Key     |   Type    | Description | Default |
+|------------|-----------|-------------|---------|
+|['newrelic_server']['license_key']|String|Newrelic license key (it has to be 40 characeters)|15bku035alsc55k263e507d39c45e91c20318103|
 
 Usage
 -----
 #### chef_newrelic_server::default
 
-e.g.
 Just include `chef_newrelic_server` in your node's `run_list`:
 
 ```json
@@ -46,9 +33,7 @@ Just include `chef_newrelic_server` in your node's `run_list`:
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
