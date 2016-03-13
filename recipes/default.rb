@@ -19,19 +19,16 @@
 case node["platform"]
 when "debian", "ubuntu"
   # Apt
-  execute 'configure-new-relic-apt' do
-    command "sudo sh -c 'echo deb http://apt.newrelic.com/debian/ newrelic non-free > /etc/apt/sources.list.d/newrelic.list'"
-    action :run
-  end
+  include_recipe 'apt'
 
-  execute 'get-gpg' do
-    command "wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -"
-    action :run
-  end
-
-  execute 'apt-update' do
-    command "apt-get update"
-    action :run
+  apt_resource 'newrelic' do
+    uri 'http://apt.newrelic.com/debian/'
+    distribution 'newrelic'
+    components [ 'non-free' ]
+    key '548C16BF'
+    keyserver 'download.newrelic.com'
+    action :add
+    deb_src true
   end
 when "redhat", "centos", "amazon", "scientific"
   # Yum, support only 64 bits
@@ -53,5 +50,3 @@ end
 service 'newrelic-sysmond' do
   action :start
 end
-
-# mongod --config /etc/mongod.conf
