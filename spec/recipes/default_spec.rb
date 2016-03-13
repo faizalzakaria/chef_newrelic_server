@@ -12,9 +12,7 @@ describe 'chef_newrelic_server::default' do
   context 'ubuntu/debian' do
     let(:platform) { { platform: 'ubuntu', version: '14.04' } }
 
-    it { expect(chef_run).to run_execute('configure-new-relic-apt').at_converge_time }
-    it { expect(chef_run).to run_execute('get-gpg').at_converge_time }
-    it { expect(chef_run).to run_execute('apt-update').at_converge_time }
+    it { expect(chef_run).to add_apt_repository('newrelic').at_converge_time }
     include_examples :run_the_rest
   end
 

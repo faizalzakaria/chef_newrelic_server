@@ -25,10 +25,7 @@ when "debian", "ubuntu"
     uri 'http://apt.newrelic.com/debian/'
     distribution 'newrelic'
     components [ 'non-free' ]
-    key '548C16BF'
-    keyserver 'download.newrelic.com'
-    action :add
-    deb_src true
+    key 'http://download.newrelic.com/548C16BF.gpg'
   end
 when "redhat", "centos", "amazon", "scientific"
   # Yum, support only 64 bits
